@@ -1,5 +1,9 @@
 <div class="jumbotron">
   <h1><i class="fa fa-moon-o"></i>Bullhorn!</h1>
   <p>How goes it, Mate?! This is my bootleg Twitter! Have a look around.</p>
-  <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+   <% if current_user %>
+  <li><%= link_to "Send A Moo", new_moo_path, class: "btn btn-primary btn-lg" %> </li>
+        <% else %>
+  <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %> 
+  <% end %> 
 </div>

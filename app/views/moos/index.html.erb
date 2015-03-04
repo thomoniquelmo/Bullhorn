@@ -1,0 +1,12 @@
+<h1>Recent Moos</h1>
+  
+<% @moos.each do |moo| %>
+        <div class="panel panel-default">
+  <div class="panel-body">
+    <%= moo.content %>    
+  </div>
+</div>
+    <% end %>
+
+
+<%= link_to 'New Moo', new_moo_path %>
